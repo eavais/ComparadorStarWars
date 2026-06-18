@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha del personaje</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-yellow-300">
+
+    <div class="container mx-auto p-6">
+
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-widest text-yellow-400">
+                Ficha del personaje
+            </h1>
+
+            <p class="text-slate-300 mt-3">
+                Información individual del personaje seleccionado
+            </p>
+        </header>
+
+        <main class="bg-black border border-yellow-400 rounded-3xl p-6 shadow-2xl">
+
+            <div class="mb-6">
+                <a href="index.html" class="inline-block bg-yellow-400 text-black font-bold px-5 py-2 rounded-xl hover:bg-yellow-300">
+                    Volver al comparador
+                </a>
+            </div>
+
+            <section id="character-detail" class="text-center">
+                <p class="text-slate-300">
+                    Cargando personaje...
+                </p>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="personaje.js"></script>
+</body>
+
+</html>

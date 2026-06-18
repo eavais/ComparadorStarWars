@@ -43,20 +43,32 @@ const mostrarCharacters = () => {
                     ${character.species || 'Especie desconocida'}
                 </p>
 
-                <button 
-                    onclick="seleccionarCharacter(${character.id})"
-                    class="mt-4 px-4 py-2 rounded-xl font-bold shadow ${
-                        isSelected || maxSelected
-                            ? 'bg-gray-600 text-gray-300 cursor-not-allowed'
-                            : 'bg-yellow-400 text-black hover:bg-yellow-300 cursor-pointer'
+                <div class="flex flex-col gap-3 mt-4">
+                    <button
+                         onclick="verFichaCharacter(${character.id})"
+                        class="px-4 py-2 rounded-xl font-bold shadow bg-slate-700 text-white hover:bg-slate-600 cursor-pointer"
+                    >
+                    Ver ficha
+                    </button>
+
+                    <button 
+                        onclick="seleccionarCharacter(${character.id})"
+                        class="px-4 py-2 rounded-xl font-bold shadow ${isSelected || maxSelected
+                        ? 'bg-gray-600 text-gray-300 cursor-not-allowed'
+                        : 'bg-yellow-400 text-black hover:bg-yellow-300 cursor-pointer'
                     }"
-                    ${isSelected || maxSelected ? 'disabled' : ''}
-                >
-                    ${isSelected ? 'Seleccionado' : 'Seleccionar'}
-                </button>
+                        ${isSelected || maxSelected ? 'disabled' : ''}
+                    >
+                        ${isSelected ? 'Seleccionado' : 'Seleccionar'}
+                    </button>
+                </div>
             </div>
         `;
     });
+}
+
+const verFichaCharacter = (id) => {
+    window.location.href = `personaje.html?id=${id}`;
 }
 
 const seleccionarCharacter = (id) => {
